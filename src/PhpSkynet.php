@@ -68,7 +68,7 @@ class PhpSkynet
 
         $filename = time() . '-'. base_path($file_path);
 
-        $response = Http::attach('file', file_get_contents( $file_path), $filename)
+        $response = Http::attach('file', file_get_contents($file_path), $filename)
             ->post(($portal_url ? $portal_url : config('php-skynet.default_portal_url')) . 'skynet/skyfile/');
 
         return $response->json();
