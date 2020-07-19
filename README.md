@@ -1,4 +1,5 @@
-# 
+# PHP-SkyNet
+#### For use with SiaCoin's Global SkyNet Network
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/php-skynet.svg?style=flat-square)](https://packagist.org/packages/spatie/php-skynet)
 ![Tests](https://github.com/mechawrench/php-skynet/workflows/Tests/badge.svg)
@@ -40,11 +41,14 @@ return [
   - We will not get into details of configuring this on your own, technical skills are assumed
 
 ``` php
-// Provide path to file for uploading
-$upload = \Mechawrench\PhpSkynet\PhpSkynet::upload(storage_path('app/Bitcoin-Accepted-Here-Button-PNG-Clipart.png'));
-
+// SkyNet Portal Usage
 // Stores files under storage/app
+$upload = \Mechawrench\PhpSkynet\PhpSkynet::upload(storage_path('app/Bitcoin-Accepted-Here-Button-PNG-Clipart.png'));
 $download = \Mechawrench\PhpSkynet\PhpSkynet::download('GAAGFVdQTCpf43KH7Wami5iNldaEHbyxQXhjDkd_ifob2g');
+
+// Private Siad Instance Usage
+$upload = \Mechawrench\PhpSkynet\PhpSkynet::uploadSiad('Bitcoin-Accepted-Here-Button-PNG-Clipart.png', storage_path('app/Bitcoin-Accepted-Here-Button-PNG-Clipart.png'), $my_optional_siad_host, $my_optional_siad_apiKey);
+$download = \Mechawrench\PhpSkynet\PhpSkynet::downloadSiad($skyLink, $optional_filename, $optional_siad_host);
 ```
 ## Current Limitations
 - Can only upload/download single files at a time for now
