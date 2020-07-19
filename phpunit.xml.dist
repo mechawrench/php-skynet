@@ -12,6 +12,7 @@
     <testsuites>
         <testsuite name="Mechawrench Test Suite">
             <directory>tests</directory>
+            <exclude>./tests/integration/PhpSkynetTest.php</exclude>
         </testsuite>
     </testsuites>
     <filter>

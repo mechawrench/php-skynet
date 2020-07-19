@@ -71,7 +71,7 @@ class PhpSkynet
         $response = Http::attach('file', file_get_contents(__DIR__ . '/' . $file_path), $filename)
             ->post(($portal_url ? $portal_url : config('php-skynet.default_portal_url')) . 'skynet/skyfile/');
 
-        return ($response->json());
+        return $response->json();
     }
 
     // Download from Skynet Portal
