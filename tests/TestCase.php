@@ -3,8 +3,8 @@
 namespace Mechawrench\PhpSkynet\Tests;
 
 use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Mechawrench\PhpSkynet\PhpSkynetServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

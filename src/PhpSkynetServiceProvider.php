@@ -3,7 +3,6 @@
 namespace Mechawrench\PhpSkynet;
 
 use Illuminate\Support\ServiceProvider;
-use Mechawrench\PhpSkynet\Commands\PhpSkynetCommand;
 
 class PhpSkynetServiceProvider extends ServiceProvider
 {

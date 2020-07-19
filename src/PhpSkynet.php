@@ -4,7 +4,6 @@ namespace Mechawrench\PhpSkynet;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
-use GuzzleHttp\Client;
 
 class PhpSkynet
 {
@@ -12,26 +11,22 @@ class PhpSkynet
     public static function uploadSiad($filename, $file_path, $host, $apiKey)
     {
         // Check for host
-        if(!$host && !config('php-skynet.siad_host'))
-        {
+        if (! $host && ! config('php-skynet.siad_host')) {
             return ['error' => 'Host is required'];
         }
 
         // Check for apiKey
-        if(!$apiKey  && !config('php-skynet.siad_api_key'))
-        {
+        if (! $apiKey && ! config('php-skynet.siad_api_key')) {
             return ['error' => 'ApiKey is required'];
         }
 
         // Check for $filename
-        if(!$filename)
-        {
+        if (! $filename) {
             return ['error' => 'Filename is required'];
         }
 
         // Check for apiKey
-        if(!$file_path)
-        {
+        if (! $file_path) {
             return ['error' => 'File (path) is required'];
         }
 
@@ -49,8 +44,7 @@ class PhpSkynet
     public static function downloadSiad($skyLink, $filename = null, $host)
     {
         // Check for host
-        if(!$host && !config('php-skynet.siad_host'))
-        {
+        if (! $host && ! config('php-skynet.siad_host')) {
             return ['error' => 'Host is required'];
         }
 
@@ -68,8 +62,7 @@ class PhpSkynet
     public static function upload($file_path, $portal_url = null)
     {
         // Check for apiKey
-        if(!$file_path)
-        {
+        if (! $file_path) {
             return ['error' => 'File (path) is required'];
         }
 
@@ -85,14 +78,13 @@ class PhpSkynet
     public static function download($skyLink, $portal_url = null)
     {
         // Check for Syylink
-        if(!$skyLink)
-        {
+        if (! $skyLink) {
             return ['error' => 'Skylink is required'];
         }
 
         $response = Http::get(($portal_url ? $portal_url : config('php-skynet.default_portal_url')) . $skyLink);
 
-        $filename =  json_decode($response->getHeaders()['Skynet-File-Metadata'][0])->filename;
+        $filename = json_decode($response->getHeaders()['Skynet-File-Metadata'][0])->filename;
         $body = $response->getBody();
         $stringBody = (string) $body;
 
