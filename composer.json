@@ -1,22 +1,22 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
+    "name": "mechawrench/php-skynet",
+    "description": "",
     "keywords": [
-        "spatie",
-        ":package_name"
+        "php-skynet"
     ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "homepage": "https://github.com/mechawrench/php-skynet",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Jesse Schneider",
+            "email": "jesse.schneider@hey.com",
+            "homepage": "https://mecharwench.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.16",
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Mechawrench\\PhpSkynet\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Mechawrench\\PhpSkynet\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
+                "Mechawrench\\Php Skynet\\PhpSkynetServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
+                "Php Skynet": "Mechawrench\\PhpSkynet\\Php SkynetFacade"
             }
         }
     },

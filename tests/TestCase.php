@@ -1,9 +1,10 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Mechawrench\PhpSkynet\Tests;
 
+use Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Skeleton\SkeletonServiceProvider;
+use Mechawrench\PhpSkynet\PhpSkynetServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -17,7 +18,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            PhpSkynetServiceProvider::class,
         ];
     }
 
@@ -30,9 +31,9 @@ class TestCase extends Orchestra
             'prefix' => '',
         ]);
 
-        /*
-        include_once __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        (new \CreatePackageTable())->up();
-        */
+        // make sure, our .env file is loaded
+        $app->useEnvironmentPath(__DIR__.'/..');
+        $app->bootstrapWith([LoadEnvironmentVariables::class]);
+        parent::getEnvironmentSetUp($app);
     }
 }
