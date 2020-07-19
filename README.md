@@ -1,9 +1,9 @@
 # PHP-SkyNet
 #### For use with SiaCoin's Global SkyNet Network
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/php-skynet.svg?style=flat-square)](https://packagist.org/packages/spatie/php-skynet)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mechawrench/php-skynet.svg?style=flat-square)](https://packagist.org/packages/mechawrench/php-skynet)
 ![Tests](https://github.com/mechawrench/php-skynet/workflows/Tests/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/php-skynet.svg?style=flat-square)](https://packagist.org/packages/spatie/php-skynet)
+[![Total Downloads](https://img.shields.io/packagist/dt/mechawrench/php-skynet.svg?style=flat-square)](https://packagist.org/packages/mechawrench/php-skynet)
 
 
 SkyNet by SiaCoin allows for users to upload files for download by anyone else in the world.  I noticed there was no 
