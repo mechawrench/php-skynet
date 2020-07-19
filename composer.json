@@ -47,10 +47,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mechawrench\\Php Skynet\\PhpSkynetServiceProvider"
+                "Mechawrench\\PhpSkynet\\PhpSkynetServiceProvider"
             ],
             "aliases": {
-                "Php Skynet": "Mechawrench\\PhpSkynet\\Php SkynetFacade"
+                "Php Skynet": "Mechawrench\\PhpSkynet\\PhpSkynetFacade"
             }
         }
     },

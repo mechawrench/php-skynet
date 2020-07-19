@@ -5,7 +5,7 @@ namespace Mechawrench\PhpSkynet;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Mechawrench\PhpSkynet\Php Skynet
+ * @see \Mechawrench\PhpSkynet\PhpSkynet
  */
 class PhpSkynetFacade extends Facade
 {

@@ -34,7 +34,7 @@ class PhpSkynet
 
         $response = Http::withBasicAuth('', ($apiKey ? $apiKey : config('php-skynet.siad_api_key')))
             ->withHeaders(['user-agent' => 'Sia-Agent'])
-            ->attach('file', file_get_contents(__DIR__ . '/' . $file_path), $filename)
+            ->attach('file', file_get_contents($file_path), $filename)
             ->post(($host ? $host : config('php-skynet.siad_host')) .'/skynet/skyfile/' . $filename . '?filename=' . $filename);
 
         return ($response->json());
@@ -68,7 +68,7 @@ class PhpSkynet
 
         $filename = time() . '-'. base_path($file_path);
 
-        $response = Http::attach('file', file_get_contents(__DIR__ . '/' . $file_path), $filename)
+        $response = Http::attach('file', file_get_contents( $file_path), $filename)
             ->post(($portal_url ? $portal_url : config('php-skynet.default_portal_url')) . 'skynet/skyfile/');
 
         return $response->json();
@@ -88,6 +88,8 @@ class PhpSkynet
         $body = $response->getBody();
         $stringBody = (string) $body;
 
-        return Storage::put($filename, $stringBody);
+        Storage::put($filename, $stringBody);
+
+        return 'storage/app/' . $filename;
     }
 }

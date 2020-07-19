@@ -7,17 +7,9 @@ use Mechawrench\PhpSkynet\PhpSkynet;
 class PhpSkynetTest extends TestCase
 {
     /** @test */
-    public function upload_requires_a_valid_apiKey()
-    {
-        $upload = PhpSkynet::uploadSiad('php-skynet.png', 'upload_files/php-skynet.png', env('SIAD_HOST'), 'invalidKey');
-
-        $this->assertEquals('API authentication failed.', $upload['message']);
-    }
-
-    /** @test */
     public function upload_requires_a_filename()
     {
-        $upload = PhpSkynet::uploadSiad('', 'php-skynet.png', env('SIAD_HOST'), env('SIAD_API_KEY'));
+        $upload = PhpSkynet::uploadSiad('', env('EXAMPLE_FILE'), env('SIAD_HOST'), env('SIAD_API_KEY'));
 
         $this->assertEquals('Filename is required', $upload['error']);
     }
