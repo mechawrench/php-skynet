@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class PhpSkynet
 {
     // Upload to remote/local Siad API
-    public static function uploadSiad($filename, $file_path, $host, $apiKey)
+    public static function uploadSiad($filename, $file_path, $host = null, $apiKey = null)
     {
         // Check for host
         if (! $host && ! config('php-skynet.siad_host')) {
@@ -41,7 +41,7 @@ class PhpSkynet
     }
 
     // Download to remote/local Siad API
-    public static function downloadSiad($skyLink, $filename = null, $host)
+    public static function downloadSiad($skyLink, $filename = null, $host = null)
     {
         // Check for host
         if (! $host && ! config('php-skynet.siad_host')) {
