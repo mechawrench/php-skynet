@@ -1,6 +1,8 @@
 # PHP-SkyNet
 #### For use with SiaCoin's Global SkyNet Network
 
+![PHP-Skynet](https://banners.beyondco.de/PHP-SkyNet.png?theme=light&packageManager=composer+require&packageName=mechawrench%2FPHP-SkyNet&pattern=cage&style=style_1&description=SiaCoin+Skynet%2C+for+PHP%21&md=1&showWatermark=0&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg "PHP-Skynet Package")
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mechawrench/php-skynet.svg?style=flat-square)](https://packagist.org/packages/mechawrench/php-skynet)
 ![Tests](https://github.com/mechawrench/php-skynet/workflows/Tests/badge.svg)
 [![Total Downloads](https://img.shields.io/packagist/dt/mechawrench/php-skynet.svg?style=flat-square)](https://packagist.org/packages/mechawrench/php-skynet)
